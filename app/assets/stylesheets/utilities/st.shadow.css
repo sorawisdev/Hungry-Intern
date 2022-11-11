@@ -1,0 +1,15 @@
+.st-u-shadow-1 {
+  box-shadow: var(--st-shadow-1);
+}
+
+.st-u-shadow-2 {
+  box-shadow: var(--st-shadow-2);
+}
+
+.st-u-shadow-3 {
+  box-shadow: var(--st-shadow-3);
+}
+
+.st-u-shadow-4 {
+  box-shadow: var(--st-shadow-4);
+}

@@ -1,0 +1,236 @@
+@import "bootstrap";
+@import "settings/st.colors.css";
+@import "settings/st.fonts.css";
+@import "settings/st.spacing.css";
+@import "settings/st.borders.css";
+
+@import "layouts/st.home.css";
+
+@import "components/st.buttons.css";
+@import "components/st.card.css";
+@import "components/st.carousel.css";
+@import "components/st.icon.css";
+@import "components/st.form.css";
+
+@import "utilities/st.background.css";
+@import "utilities/st.border.css";
+@import "utilities/st.font_scale.css";
+@import "utilities/st.shadow.css";
+@import "utilities/st.text_color.css";
+
+
+html {
+    font-family: 'Noto Sans Thai', sans-serif;
+  font-family: var(--st-font-family);
+  font-size: var(--st-type-base-size);
+  height: 100%;
+}
+
+body {
+  background-color: var(--st-bg-1);
+}
+
+footer {
+  color: var(--st-s-color--white50);
+}
+
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.c-div {
+  color: var(--st-tertiary-900);
+}
+
+.c-class {
+  color: var(--st-primary-900);
+}
+
+.layout-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.layout-card--code {
+  margin-left: 24px;
+}
+
+
+html {
+    
+  }
+  
+  .header-nav-link {
+    font-size: var(--st-type-base-size);
+    font-weight: var(--st-font-weight-2);
+    font-family: var(--st-font-family);
+    color: var(--st-s-text--black800);
+    text-decoration: none;
+    margin-left: 2.5rem;
+    line-height: 22px;
+  }
+  
+  .header-nav-link_active {
+    border-bottom: 3px solid #EE415F;
+    font-weight: var(--st-font-weight-6);
+  }
+  
+  .footer-link {  
+    font-size: var(--st-type-base-size);
+    color: var(--st-s-text--white500);
+    text-decoration: none;
+    margin-left: 2.5rem;
+    line-height: 22px;
+  }
+  
+  .brand-background {
+    background-image: url('/assets/brand_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .bread_active {
+    font-weight: var(--st-font-weight-6);
+  }
+  
+  .breadcrumb a, 
+  .row a {
+    text-decoration: none;
+    color: var(--st-s-text--black800);
+  }
+  
+  .banner_image {
+    width: 100%;
+    height: 40vh;
+    background-image: url(/assets/img/img1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--st-border-size-4);
+  
+  }
+  
+  .square {
+    height: 32px;
+    width: 32px;
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 3px;
+    margin-right: 2rem;
+  }
+  
+  .container a {
+    text-align: center;
+    width: 10vw;
+    text-decoration: none;
+  }
+  
+  .login_field {
+      display: flex;
+      flex-direction: column;
+      height: 80vh;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .login-logo-image_size {
+    width: 160px;
+    height: 160px;
+  }
+  
+  
+  /* Sidebar */
+  .row-recipes {
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0; 
+  }
+  
+  .row-recipes a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .sign-out {
+    position: absolute;
+    bottom: 3rem;
+    left: 1.5rem;
+  }
+  
+  .col-left {
+    width: 8.33vw;
+  }
+  
+  .admin-left_bar {
+    color: #FFFFFF;
+    background-color: #EE415F;
+    text-align: center;
+  }
+  
+  .text-unerline {
+    border-bottom: 3px solid;
+  }
+  
+  .td-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .td-end a {
+    color: #232323;
+  }
+  
+  .pagination li a {
+    color: var(--st-s-text--black800);
+    border: none;
+  }
+  
+  .pagination .active a{
+    background-color: var(--st-tertiary-500);
+  }
+  
+  
+  
+  
+  @media (max-width: 768px) { 
+    .col-left {
+      width: 16vw;
+    }
+    .sign-out {
+      position: absolute;
+      bottom: 3rem;
+      left: 0.5rem;
+    }
+  }
+  
+   /* `sm` applies to x-small devices (portrait phones, less than 576px) */
+   @media (max-width: 575.98px) { 
+    .col-left {
+      width: 25vw;
+    }
+    .sign-out {
+      position: absolute;
+      bottom: 3rem;
+      left: 1rem;
+    }
+    
+  }
+  

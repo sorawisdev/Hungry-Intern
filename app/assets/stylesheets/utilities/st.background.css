@@ -1,0 +1,131 @@
+.st-u-bg--primary-100 {
+  background-color: var(--st-primary-100);
+}
+
+.st-u-bg--primary-75 {
+  background-color: var(--st-primary-75);
+}
+
+.st-u-bg--primary-50 {
+  background-color: var(--st-primary-50);
+}
+
+.st-u-bg--primary-25 {
+  background-color: var(--st-primary-25);
+}
+
+.st-u-bg--primary-5 {
+  background-color: var(--st-primary-5);
+}
+
+.st-u-bg--secondary-100 {
+  background-color: var(--st-secondary-100);
+}
+
+.st-u-bg--secondary-50 {
+  background-color: var(--st-secondary-50);
+}
+
+.st-u-bg--secondary-25 {
+  background-color: var(--st-secondary-25);
+}
+
+.st-u-bg--secondary-5 {
+  background-color: var(--st-secondary-5);
+}
+
+.st-u-bg--care-100 {
+  background-color: var(--st-care-100);
+}
+
+.st-u-bg--care-50 {
+  background-color: var(--st-care-50);
+}
+
+.st-u-bg--care-25 {
+  background-color: var(--st-care-25);
+}
+
+.st-u-bg--care-5 {
+  background-color: var(--st-care-5);
+}
+
+.st-u-bg--positive-100 {
+  background-color: var(--st-positive-100);
+}
+
+.st-u-bg--positive-50 {
+  background-color: var(--st-positive-50);
+}
+
+.st-u-bg--positive-25 {
+  background-color: var(--st-positive-25);
+}
+
+.st-u-bg--positive-5 {
+  background-color: var(--st-positive-5);
+}
+
+.st-u-bg--negative-100 {
+  background-color: var(--st-negative-100);
+}
+
+.st-u-bg--negative-50 {
+  background-color: var(--st-negative-50);
+}
+
+.st-u-bg--negative-25 {
+  background-color: var(--st-negative-25);
+}
+
+.st-u-bg--negative-5 {
+  background-color: var(--st-negative-5);
+}
+
+.st-u-bg--warning-100 {
+  background-color: var(--st-warning-100);
+}
+
+.st-u-bg--warning-50 {
+  background-color: var(--st-warning-50);
+}
+
+.st-u-bg--warning-25 {
+  background-color: var(--st-warning-25);
+}
+
+.st-u-bg--warning-5 {
+  background-color: var(--st-warning-5);
+}
+
+.st-u-bg--black-100 {
+  background-color: var(--st-black-100);
+}
+
+.st-u-bg--black-50 {
+  background-color: var(--st-black-50);
+}
+
+.st-u-bg--black-25 {
+  background-color: var(--st-black-25);
+}
+
+.st-u-bg--black-5 {
+  background-color: var(--st-black-5);
+}
+
+.st-u-bg--link {
+  background-color: var(--st-link-100);
+}
+
+.st-u-bg--white {
+  background-color: var(--st-theme-1);
+}
+
+.st-u-bg--theme-2 {
+  background-color: var(--st-theme-2);
+}
+
+.st-u-bg--theme-3 {
+  background-color: var(--st-theme-3);
+}

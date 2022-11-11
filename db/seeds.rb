@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+catagory = Category.all
+# Category.create()
+
+if catagory.size.zero?
+    ['Breakfast', 'Lunch', 'Dinner', 'Dessert', 'Snack and Appetizers'].map do |catagory|
+        Category.create(name: catagory)
+    end
+end
+
+

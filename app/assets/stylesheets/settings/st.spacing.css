@@ -1,0 +1,15 @@
+:where(html) {
+  --st-spacing-01: .125rem;
+  --st-spacing-02: .25rem;
+  --st-spacing-03: .5rem;
+  --st-spacing-04: .75rem;
+  --st-spacing-05: 1rem;
+  --st-spacing-06: 1.5rem;
+  --st-spacing-07: 2rem;
+  --st-spacing-08: 2.5rem;
+  --st-spacing-09: 3rem;
+  --st-spacing-10: 4rem;
+  --st-spacing-11: 5rem;
+  --st-spacing-12: 6rem;
+  --st-spacing-13: 10rem;
+}
