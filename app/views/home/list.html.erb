@@ -41,7 +41,7 @@
       <% @lists.reverse.each do |recipe| %>
       <div class="col d-flex justify-content-center mb-4">
         <%= link_to action: "show", id: recipe do %>
-        <div class="st-c-card-small ">
+        <div class="st-c-card-small bg-white">
           <% if recipe.recipe_image.attached? %>
             <img class="st-c-card-small--image" src="<%= rails_blob_url(recipe.recipe_image) %>" alt="recipes img">
           <% end %>

@@ -34,11 +34,11 @@
           <!-- card1 -->
           <div class="col">  
             <%= link_to action: "show", id: @recipes_reverse[0] do %>
-            <div class="st-c-card-horizontal mb-3">
+            <div class="st-c-card-horizontal bg-white mb-5">
               <% if @recipes_reverse[0].recipe_image.attached? %>
                 <img class="st-c-card-horizontal--image" src="<%= rails_blob_url(@recipes_reverse[0].recipe_image) %>" alt="recipes img">
               <% end %>
-              <div class="st-c-card-horizontal--text text-start">
+              <div class="st-c-card-horizontal--text  text-start">
                 <h5 class="st-c-card-text--header text-truncate"><%= @recipes_reverse[0].name %></h5>
                 <p class="st-s-text--tertiary500"><%= @recipes_reverse[0].category.name%></p>
                 <p> <%= @recipes_reverse[0].description %></p>
@@ -51,7 +51,7 @@
           <div class="col">
             <!-- card2 -->
             <%= link_to action: "show", id: @recipes_reverse[1] do %>
-            <div class="st-c-card-horizontal mb-3">
+            <div class="st-c-card-horizontal bg-white mb-0">
               <% if @recipes_reverse[1].recipe_image.attached? %>
                 <img class="st-c-card-horizontal--image" src="<%= rails_blob_url(@recipes_reverse[1].recipe_image) %>" alt="recipes img">
               <% end %>
@@ -68,7 +68,7 @@
 
       <div class="col-sm-12 col-lg-4">
         <%= link_to action: "show", id: @recipes_reverse[2] do %>
-        <div class="st-c-card">
+        <div class="st-c-card bg-white h-100">
           <% if @recipes_reverse[2].recipe_image.attached? %>
             <img class="st-c-card-image" src="<%= rails_blob_url(@recipes_reverse[2].recipe_image) %>" alt="...">
           <% end %>
@@ -118,7 +118,7 @@
       <% @recipes_reverse.last(8).each do |recipe| %>  
       <div class="col d-flex justify-content-center mb-4">
         <%= link_to action: "show", id: recipe do %>
-        <div class="st-c-card-small ">
+        <div class="st-c-card-small bg-white">
           <% if recipe.recipe_image.attached? %>
             <img class="st-c-card-small--image" src="<%= rails_blob_url(recipe.recipe_image) %>" alt="recipes img">
           <% end %>
