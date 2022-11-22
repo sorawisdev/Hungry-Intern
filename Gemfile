@@ -51,12 +51,17 @@ gem "font-awesome-sass", "~> 6.2.1"
 gem 'rails_admin', '~> 3.0.0'
 
 gem 'devise'
+
+gem 'rolify'
+gem 'cancancan'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'rspec-rails', '~> 6.0.0'
+  
 end
 
 group :development do
@@ -68,6 +73,8 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'erb-formatter'
+  
 end
 
 group :test do
@@ -75,5 +82,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'simplecov', require: false
 end
 gem "sassc-rails"

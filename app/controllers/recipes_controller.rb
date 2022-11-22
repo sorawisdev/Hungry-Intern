@@ -1,21 +1,12 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!
-  before_action :get_recipe, only: [:edit, :update, :destroy, :show]
+  load_and_authorize_resource
 
-  def get_recipe
-    @recipe = Recipe.find_by(id: params[:id])
-  end
+  def index; end
+  
+  def new; end
 
-  def index
-    @recipes = Recipe.all
-  end
-
-  def new
-    @recipe = Recipe.new
-  end
-
-  def edit 
-  end
+  def edit; end
 
   def update
     if @recipe.update(recipe_params)
@@ -34,8 +25,7 @@ class RecipesController < ApplicationController
     end
   end
 
-  def show
-  end
+  def show; end
   
   def destroy
     if @recipe.destroy

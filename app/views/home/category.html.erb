@@ -19,7 +19,8 @@
             <%= link_to 'All Recipes', list_path(@lists) %>
           </li>
         </ul>
-        <a href=" <%= recipes_path %> "><button class="st-c-btn-primary"> For Admin </button></a>
+                <%= link_to "For Admin" , new_user_session_path , class:"st-c-btn-primary text-decoration-none" %>
+
 
       </div>
     </div>
