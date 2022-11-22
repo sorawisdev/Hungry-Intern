@@ -23,19 +23,10 @@ body {
 
 .header-nav-link_active {
   border-bottom: 3px solid #EE415F;
+  font-weight: var(--st-font-weight-6);
 }
 
-.footer-nav-link a {
-  font-size: var(--st-type-base-size);
-  font-weight: var(--st-font-weight-2);
-  font-family: var(--st-font-family);
-  color: var(--st-s-color--white900);
-  text-decoration: none;
-  margin-left: 2.5rem;
-  line-height: 22px;
-}
-
-.footer-link {
+.footer-link {  
   font-size: var(--st-type-base-size);
   color: var(--st-s-text--white500);
   text-decoration: none;
@@ -43,12 +34,17 @@ body {
   line-height: 22px;
 }
 
+.brand-background {
+  background-image: url('/assets/img/brand_background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .bread_active {
   font-weight: var(--st-font-weight-6);
 }
 
-.breadcrumb a,
+.breadcrumb a, 
 .row a {
   text-decoration: none;
   color: var(--st-s-text--black800);
@@ -57,31 +53,13 @@ body {
 .banner_image {
   width: 100%;
   height: 40vh;
+  background-image: url(/assets/img/img1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-radius: var(--st-border-size-4);
-  object-fit: cover;
-}
 
-.subscribe-field {
-  min-height: 45vh;
 }
-
-.subscribe-field img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  min-height: 45vh;
-}
-.subsrcibe-text {
-  position: absolute;
-  top: 10rem;
-  left: 37rem;
-}
-.subsrcibe-form {
-  position: absolute;
-  top: 7.5rem;
-  right: 20.5rem;
-}
-
 
 .square {
   height: 32px;
@@ -94,13 +72,18 @@ body {
   margin-right: 2rem;
 }
 
+.container a {
+  text-align: center;
+  width: 10vw;
+  text-decoration: none;
+}
 
 .login_field {
-  display: flex;
-  flex-direction: column;
-  height: 80vh;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-logo-image_size {
@@ -116,55 +99,28 @@ body {
   min-height: 100vh;
   top: 0;
   bottom: 0;
-  left: 0;
-  overflow: hidden;
+  left: 0; 
+}
+
+.row-recipes a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .sign-out {
   position: absolute;
   bottom: 3rem;
-  left: 3rem;
+  left: 1.5rem;
 }
 
 .col-left {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-height: 100vh;
-  width: 10vw;
+  width: 8.33vw;
+}
+
+.admin-left_bar {
   color: #FFFFFF;
   background-color: #EE415F;
   text-align: center;
-}
-
-.col-left a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.col-right {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 90vw;
-  padding: 2rem;
-  /* min-height: 100vh; */
-}
-
-.content {
-  margin: 1.5rem 0 1.5rem;
-  border-top: 1px solid #232323;
-  border-bottom: 1px solid #232323;
-  padding: 0 0 1rem 0;
-  height: 75vh;
-  overflow-y: auto;
-}
-
-.shadow-bar {
-  width: 86vw;
-  background-color: #FFFFFF;
-  height: 15px;
-  position: fixed;
 }
 
 .text-unerline {
@@ -185,291 +141,33 @@ body {
   border: none;
 }
 
-.pagination .active a {
+.pagination .active a{
   background-color: var(--st-tertiary-500);
 }
 
-.description,
-.instructions {
-  height: 20vh;
-}
-
-.up-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px dashed #E7E7E7;
-  border-radius: 5px;
-  height: auto;
-}
-
-i.fa-light.fa-image {
-  font-size: 54px;
-}
-
-.ingradients-checkbox-field {
-  min-height: 50vh;
-  padding: 0 2rem 0 2rem;
-  overflow-y: auto;
-  margin-left: 0.6vw;
-  width: 99.99% !important;
-}
-
-/* -webkit-scrollbar */
-/* width */
-::-webkit-scrollbar {
-  width: 2px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-}
 
 
 
-
-@media (max-width: 768px) {
-  .row-recipes {
-    width: 100vw;
-    overflow-x: hidden;
-  }
-
+@media (max-width: 768px) { 
   .col-left {
-    width: 20vw;
+    width: 16vw;
   }
-
-  .col-right {
-    width: 80vw;
-    height: 100vh;
-  }
-
-  .ingradients-checkbox-field {
-    margin-left: 1.6vw;
-    width: 98% !important;
-    height: 50vh;
-  }
-
-  .row-checkbox-rps {
-    display: flex;
-    flex-wrap: wrap;
-    white-space: nowrap;
-    overflow-y: auto;
-  }
-
   .sign-out {
     position: absolute;
     bottom: 3rem;
-    left: 2rem;
+    left: 0.5rem;
   }
-
-  .td-end {
-    display: table-cell;
-  }
-
-  div.delete button {
-    width: 50% !important;
-    margin-right: 2rem;
-  }
-
-  .update input {
-    width: 100% !important;
-  }
-
-  .subsrcibe-text {
-    position: absolute;
-    top: 10rem;
-    left: 4rem;
-  }
-  .subsrcibe-form {
-    position: absolute;
-    top: 8.5rem;
-    right: 4rem;
-  }
-  .footer-nav-link a {
-    font-size: 1rem;
-    text-decoration: none;
-    margin-left: 0;
-    line-height: 22px;
-    text-align: center;
-  }
-
-
 }
 
-/* `sm` applies to x-small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+ /* `sm` applies to x-small devices (portrait phones, less than 576px) */
+ @media (max-width: 575.98px) { 
   .col-left {
-    width: 20vw;
-    height: 100vh;
+    width: 25vw;
   }
-
-  .col-right {
-    height: 100vh;
-    width: 80vw;
-    padding: 10px;
-  }
-
-  i.fa-solid.fa-chevron-left,
-  p.nav-header {
-    font-size: 1.3rem;
-  }
-
-  img.logo-side {
-    height: 2rem;
-  }
-
-  p.mt-3.side-recipes,
-  i.fa-pot-food.fa-solid {
-    font-size: 0.5rem;
-  }
-
-  .w-75.content-rps {
-    width: 100% !important;
-  }
-
-  .ingradients-checkbox-field {
-    margin-left: 3.1vw;
-    width: 97% !important;
-  }
-
-  button.catagory-btn {
-    min-width: 100%;
-  }
-
-  i.fa-light.fa-image {
-    font-size: 20px;
-  }
-
-  a.text-center.w-75,
-  a.text-center.w-75 p {
-    font-size: 0.5rem;
-  }
-
-  .instructions-box {
-    width: 100% !important;
-  }
-
   .sign-out {
-    left: 0.5rem;
-    align-items: center;
-  }
-
-  .sign-out a,
-  .sign-out i {
-    font-size: 0.5rem;
-  }
-
-  table {
-    font-size: 0.5rem;
-  }
-
-  .table-outline-rps {
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  .footer-submit div {
-    justify-content: center !important;
-  }
-
-  .footer-submit div a,
-  .footer-submit div button,
-  .footer-submit div input {
-    font-size: 0.5rem;
-    margin: 0 0.5rem 0 0 !important;
-  }
-
-  .add-recipes-rps {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-  }
-  .add-recipes-rps button {
-    font-size: 0.5rem;
-    padding: 8px;
-  }
-
-  .pagination li.page-item,
-  .pagination li a,
-  .pagination i.fa-solid,
-  .page-link-rps span,
-  .page-link-rps div.dropdown button p {
-    font-size: 0.5rem !important;
-    margin: 0px !important;
-    padding: 0px 2px 0px 2px !important;
-    text-align: center !important;
-  }
-
-  .page-link-rps div.dropdown {
-    width: 40% !important;
-    margin-left: 5px !important;
-  }
-
-  .page-link-rps div.dropdown button {
-    padding: 3px !important;
+    position: absolute;
+    bottom: 3rem;
+    left: 1rem;
   }
   
-  .td-end {
-    display: table-cell;
-  }
-
-  .instructions {
-    width: 68vw !important;
-  }
-
-  div.modal-content  {
-    width: 85vw !important;
-    margin: auto;
-  }
-
-  .modal-footer button,
-  .modal-footer a button {
-    width: 100% !important;
-  }
-
-  .subscribe-field h2,
-  .subscribe-field p,
-  .subscribe-field input,
-  .subscribe-field button {
-    font-size: 0.5rem;
-  }
-  .subsrcibe-text {
-    position: absolute;
-    top: 6rem;
-    left: 3rem;
-  }
-  .subsrcibe-form {
-    position: absolute;
-    top: 5rem;
-    right: 2rem;
-  }
-  .subsrcibe-form  {
-    position: absolute;
-    top: 4rem;
-    right: 2rem;
-  }
-
-  .breadcrumb li.breadcrumb-item {
-    font-size: 0.5rem;
-  }
-
-  .footer-nav-link a {
-    font-size: 1rem;
-    text-decoration: none;
-    margin-left: 0;
-    line-height: 22px;
-    text-align: center;
-  }
-
 }

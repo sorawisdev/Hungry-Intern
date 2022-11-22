@@ -103,4 +103,14 @@
    .st-c-card-horizontal--image {
     width: 100%;
    }
+
+   .st-c-card-small--text {
+    height: 230px;
+  }
+ }
+
+ @media (min-width: 768px) { 
+  .st-c-card-small--text {
+    height: 150px;
+  }
  }

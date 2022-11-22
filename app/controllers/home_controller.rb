@@ -23,7 +23,4 @@ class HomeController < ApplicationController
   def category
     @categ = Category.find_by(id: params[:id])
   end
-
-  def show
-  end
 end
