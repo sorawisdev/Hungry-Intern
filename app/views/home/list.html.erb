@@ -1,0 +1,85 @@
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="<%= root_path %>">
+        <img src="/assets/logo-nav.svg" alt="logo-nav">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <% Category.all.each do |c| %>
+            <li class="header-nav-link text-decoration-none">
+              <%= link_to c.name, action: "category", id: c %>
+            </li>
+          <% end %>
+          <li class="header-nav-link">
+            <%= link_to 'All Recipes', list_path(@lists), class:"header-nav-link_active" %>
+          </li>
+        </ul>
+        <a href=" <%= recipes_path %> "><button class="st-c-btn-primary"> For Admin </button></a>
+
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- 8 cards -->
+  <div class="container mt-5">
+  <!-- breamdcrumb -->
+    <div aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="<%= root_path %>">Home</a></li>
+        <li class="breadcrumb-item bread_active st-s-text--primary500" aria-current="page">All Recipes</li>
+      </ol>
+    </div>
+    <!-- 1st row -->
+    <div class="row my-4">
+      <% @lists.reverse.each do |recipe| %>
+      <div class="col d-flex justify-content-center mb-4">
+        <%= link_to action: "show", id: recipe do %>
+        <div class="st-c-card-small ">
+          <% if recipe.recipe_image.attached? %>
+            <img class="st-c-card-small--image" src="<%= rails_blob_url(recipe.recipe_image) %>" alt="recipes img">
+          <% end %>
+          <a href="#" class="st-c-card-mall--text h-auto p-2">
+            <h5 class="st-c-card-text--header text-truncate"> <%= recipe.name %> </h5>
+            <p class="st-s-text--tertiary500"> <%= recipe.category.name %> </p>
+            <p class="st-c-card-small--text"> <%= recipe.description %> </p>
+            <p class="st-c-card-text--date"> <%= recipe.created_at.strftime("%d %b, %Y") %> </p>
+          </a>
+        </div>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</main>
+
+<footer class="mt-5">
+  <div class="footer py-3 st-s-color--primary500">
+    <div class="d-flex justify-content-center mt-4 mb-3">
+      <img src="/assets/logo-footer.svg" alt="logo-footer">
+    </div>
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3 mt-3">
+      <% @categs.each do |c| %>
+        <li class="footer-nav-link st-s-text--white50 text-decoration-none text-center px-3">
+          <%= link_to c.name, action: "category", id: c %>
+        </li>
+      <% end %>
+
+      <li class="footer-nav-link st-s-text--white50 text-decoration-none text-center px-3">
+        <%= link_to 'All Recipes', list_path(@lists) %>
+      </li>
+    </ul>
+    <div class="d-flex justify-content-center mb-5">
+      <small class="st-s-text--white50">
+        ©2022 Banana Coding Co., Ltd. all rights reserved
+      </small>
+
+    </div>
+  </div>
+</footer>

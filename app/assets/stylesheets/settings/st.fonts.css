@@ -1,0 +1,103 @@
+
+:where(html) {
+  /* Set font */
+  --st-font-family: 'Noto Sans Thai', sans-serif;
+  /* Typo starting point */
+  --st-type-base-size: 16px;
+  --st-scale-ratio: 1.25;
+
+  --st-font-weight-1: 100;
+  --st-font-weight-2: 200;
+  --st-font-weight-3: 300;
+  --st-font-weight-4: 400;
+  --st-font-weight-5: 500;
+  --st-font-weight-6: 600;
+  --st-font-weight-7: 700;
+  --st-font-weight-8: 800;
+  --st-font-weight-9: 900;
+  --st-font-lineheight-00: .95;
+  --st-font-lineheight-0: 1.1;
+  --st-font-lineheight-1: 1.25;
+  --st-font-lineheight-2: 1.375;
+  --st-font-lineheight-3: 1.5;
+  --st-font-lineheight-4: 1.75;
+  --st-font-lineheight-5: 2;
+  --st-font-letterspacing-0: -.05em;
+  --st-font-letterspacing-1: .025em;
+  --st-font-letterspacing-2: .050em;
+  --st-font-letterspacing-3: .075em;
+  --st-font-letterspacing-4: .150em;
+  --st-font-letterspacing-5: .500em;
+  --st-font-letterspacing-6: .750em;
+  --st-font-letterspacing-7: 1em;
+  --st-font-header-1: 76.29px;
+  --st-font-header-2: 61.04px;
+  --st-font-header-3: 48.83px;
+  --st-font-header-4: 39.06px;
+  --st-font-header-5: 31.25px;
+  --st-font-subtitle: 20px;
+  --st-font-size-1: 12px;
+  --st-font-size-0: 10px;
+}
+
+h1,
+.st-f-header--1 {
+  font-size: var(--st-font-header-1);
+}
+
+h2,
+.st-f-header--2 {
+  font-size: var(--st-font-header-2);
+}
+
+h3,
+.st-f-header--3 {
+  font-size: var(--st-font-header-3);
+}
+
+h4,
+.st-f-header--4 {
+  font-size: var(--st-font-header-4);
+}
+
+h5,
+.st-f-header--5 {
+  font-size: var(--st-font-header-5);
+}
+
+.subtitle {
+  font-size: var( --st-font-subtitle);
+}
+
+p {
+  font-size: var(--st-type-base-size);
+}
+
+small,
+.st-f-size-0 {
+  font-size: var(--st-font-size-1);
+}
+
+.st-f-size-1 {
+  font-size: var(--st-font-size-0);
+}
+
+.st-font-weight-4 {
+  font-weight: var(--st-font-weight-4);
+}
+
+.st-font-weight-5 {
+  font-weight: var(--st-font-weight-5);
+}
+
+.st-font-weight-6 {
+  font-weight: var(--st-font-weight-6);
+}
+
+.st-font-weight-7 {
+  font-weight: var(--st-font-weight-7);
+}
+
+.st-font-weight-8 {
+  font-weight: var(--st-font-weight-8);
+}

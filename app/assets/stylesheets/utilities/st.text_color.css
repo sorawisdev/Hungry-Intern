@@ -1,0 +1,137 @@
+.st-u-text-color--primary-100 {
+  color: var(--st-primary-100);
+}
+
+.st-u-text-color--primary-75 {
+  color: var(--st-primary-75);
+}
+
+.st-u-text-color--primary-50 {
+  color: var(--st-primary-50);
+}
+
+.st-u-text-color--primary-25 {
+  color: var(--st-primary-25);
+}
+
+.st-u-text-color--primary-5 {
+  color: var(--st-primary-5);
+}
+
+.st-u-text-color--secondary-100 {
+  color: var(--st-secondary-100);
+}
+
+.st-u-text-color--secondary-50 {
+  color: var(--st-secondary-50);
+}
+
+.st-u-text-color--secondary-25 {
+  color: var(--st-secondary-25);
+}
+
+.st-u-text-color--secondary-5 {
+  color: var(--st-secondary-5);
+}
+
+.st-u-text-color--care-100 {
+  color: var(--st-care-100);
+}
+
+.st-u-text-color--care-50 {
+  color: var(--st-care-50);
+}
+
+.st-u-text-color--care-25 {
+  color: var(--st-care-25);
+}
+
+.st-u-text-color--care-5 {
+  color: var(--st-care-5);
+}
+
+.st-u-text-color--positive-100 {
+  color: var(--st-positive-100);
+}
+
+.st-u-text-color--positive-50 {
+  color: var(--st-positive-50);
+}
+
+.st-u-text-color--positive-25 {
+  color: var(--st-positive-25);
+}
+
+.st-u-text-color--positive-5 {
+  color: var(--st-positive-5);
+}
+
+.st-u-text-color--negative-100 {
+  color: var(--st-negative-100);
+}
+
+.st-u-text-color--negative-50 {
+  color: var(--st-negative-50);
+}
+
+.st-u-text-color--negative-25 {
+  color: var(--st-negative-25);
+}
+
+.st-u-text-color--negative-5 {
+  color: var(--st-negative-5);
+}
+
+.st-u-text-color--warning-100 {
+  color: var(--st-warning-100);
+}
+
+.st-u-text-color--warning-50 {
+  color: var(--st-warning-50);
+}
+
+.st-u-text-color--warning-25 {
+  color: var(--st-warning-25);
+}
+
+.st-u-text-color--warning-5 {
+  color: var(--st-warning-5);
+}
+
+.st-u-text-color--black-100 {
+  color: var(--st-black-100);
+}
+
+.st-u-text-color--black-50 {
+  color: var(--st-black-50);
+}
+
+.st-u-text-color--black-25 {
+  color: var(--st-black-25);
+}
+
+.st-u-text-color--black-5 {
+  color: var(--st-black-5);
+}
+
+.st-u-text-color--link {
+  color: var(--st-link-100);
+}
+
+.st-u-text-color--white {
+  color: var(--st-theme-1);
+}
+
+.st-u-text-color--theme-2 {
+  color: var(--st-theme-2);
+}
+
+.st-u-text-color--theme-3 {
+  color: var(--st-theme-3);
+}
+
+.st-c-underline--yellow {
+  text-decoration: underline;
+  text-decoration-color: var(--st-secondary-100);
+  text-underline-offset: var(--st-spacing-02);
+}

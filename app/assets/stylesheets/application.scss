@@ -1,0 +1,72 @@
+@import "settings/st.colors.css";
+@import "settings/st.fonts.css";
+@import "settings/st.spacing.css";
+@import "settings/st.borders.css";
+
+@import "layouts/st.home.css";
+@import "layouts/checkbox.css";
+@import "layouts/rps_index.css";
+@import "layouts/index.css";
+
+@import "components/st.buttons.css";
+@import "components/st.card.css";
+@import "components/st.form.css";
+
+@import "utilities/st.background.css";
+@import "utilities/st.border.css";
+@import "utilities/st.font_scale.css";
+@import "utilities/st.shadow.css";
+@import "utilities/st.text_color.css";
+
+@import "bootstrap";
+@import "font-awesome";
+
+html {
+  font-family: var(--st-font-family);
+  font-size: var(--st-type-base-size);
+  height: 100%;
+}
+
+body {
+  background-color: var(--st-bg-1);
+}
+
+footer {
+  color: var(--st-s-color--white50);
+}
+
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.c-div {
+  color: var(--st-tertiary-900);
+}
+
+.c-class {
+  color: var(--st-primary-900);
+}
+
+.layout-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.layout-card--code {
+  margin-left: 24px;
+}
+
+
