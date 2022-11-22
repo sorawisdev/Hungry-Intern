@@ -13,7 +13,7 @@
 
     <div class="d-flex sign-out">
       <i class="fa-solid fa-right-from-bracket p-1"></i>
-      <a href="#">Sign out</a>
+      <%= button_to "Sign out", destroy_user_session_path,  method: :delete  %>
     </div>
   </div>
 

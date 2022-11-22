@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  before_action :authenticate_user!
   before_action :get_recipe, only: [:edit, :update, :destroy, :show]
 
   def get_recipe
