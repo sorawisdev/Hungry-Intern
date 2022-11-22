@@ -2,9 +2,6 @@ html {
   font-family: 'Noto Sans Thai', sans-serif;
 }
 
-<<<<<<< HEAD
-.header-nav-link {
-=======
 body {
   counter-reset: my-counter;
 }
@@ -15,7 +12,6 @@ body {
 }
 
 .header-nav-link a {
->>>>>>> a7fe48e7ce754ad17f3a5899c4ad886add3bfe70
   font-size: var(--st-type-base-size);
   font-weight: var(--st-font-weight-2);
   font-family: var(--st-font-family);
@@ -27,14 +23,6 @@ body {
 
 .header-nav-link_active {
   border-bottom: 3px solid #EE415F;
-<<<<<<< HEAD
-  font-weight: var(--st-font-weight-6);
-}
-
-.footer-link {  
-  font-size: var(--st-type-base-size);
-  color: var(--st-s-text--white500);
-=======
 }
 
 .footer-nav-link a {
@@ -42,20 +30,11 @@ body {
   font-weight: var(--st-font-weight-2);
   font-family: var(--st-font-family);
   color: var(--st-s-color--white900);
->>>>>>> a7fe48e7ce754ad17f3a5899c4ad886add3bfe70
   text-decoration: none;
   margin-left: 2.5rem;
   line-height: 22px;
 }
 
-<<<<<<< HEAD
-.brand-background {
-  background-image: url('/assets/img/brand_background.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-=======
 .footer-link {
   font-size: var(--st-type-base-size);
   color: var(--st-s-text--white500);
@@ -65,16 +44,11 @@ body {
 }
 
 
->>>>>>> a7fe48e7ce754ad17f3a5899c4ad886add3bfe70
 .bread_active {
   font-weight: var(--st-font-weight-6);
 }
 
-<<<<<<< HEAD
-.breadcrumb a, 
-=======
 .breadcrumb a,
->>>>>>> a7fe48e7ce754ad17f3a5899c4ad886add3bfe70
 .row a {
   text-decoration: none;
   color: var(--st-s-text--black800);
@@ -83,15 +57,6 @@ body {
 .banner_image {
   width: 100%;
   height: 40vh;
-<<<<<<< HEAD
-  background-image: url(/assets/img/img1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: var(--st-border-size-4);
-
-}
-=======
   border-radius: var(--st-border-size-4);
   object-fit: cover;
 }
@@ -117,7 +82,6 @@ body {
   right: 20.5rem;
 }
 
->>>>>>> a7fe48e7ce754ad17f3a5899c4ad886add3bfe70
 
 .square {
   height: 32px;
@@ -130,20 +94,6 @@ body {
   margin-right: 2rem;
 }
 
-<<<<<<< HEAD
-.container a {
-  text-align: center;
-  width: 10vw;
-  text-decoration: none;
-}
-
-.login_field {
-    display: flex;
-    flex-direction: column;
-    height: 80vh;
-    justify-content: center;
-    align-items: center;
-=======
 
 .login_field {
   display: flex;
@@ -151,7 +101,6 @@ body {
   height: 80vh;
   justify-content: center;
   align-items: center;
->>>>>>> a7fe48e7ce754ad17f3a5899c4ad886add3bfe70
 }
 
 .login-logo-image_size {
@@ -167,32 +116,13 @@ body {
   min-height: 100vh;
   top: 0;
   bottom: 0;
-<<<<<<< HEAD
-  left: 0; 
-}
-
-.row-recipes a {
-  color: inherit;
-  text-decoration: none;
-=======
   left: 0;
   overflow: hidden;
->>>>>>> a7fe48e7ce754ad17f3a5899c4ad886add3bfe70
 }
 
 .sign-out {
   position: absolute;
   bottom: 3rem;
-<<<<<<< HEAD
-  left: 1.5rem;
-}
-
-.col-left {
-  width: 8.33vw;
-}
-
-.admin-left_bar {
-=======
   left: 3rem;
 }
 
@@ -202,14 +132,11 @@ body {
   left: 0;
   min-height: 100vh;
   width: 10vw;
->>>>>>> a7fe48e7ce754ad17f3a5899c4ad886add3bfe70
   color: #FFFFFF;
   background-color: #EE415F;
   text-align: center;
 }
 
-<<<<<<< HEAD
-=======
 .col-left a {
   color: inherit;
   text-decoration: none;
@@ -240,7 +167,6 @@ body {
   position: fixed;
 }
 
->>>>>>> a7fe48e7ce754ad17f3a5899c4ad886add3bfe70
 .text-unerline {
   border-bottom: 3px solid;
 }
@@ -259,38 +185,6 @@ body {
   border: none;
 }
 
-<<<<<<< HEAD
-.pagination .active a{
-  background-color: var(--st-tertiary-500);
-}
-
-
-
-
-@media (max-width: 768px) { 
-  .col-left {
-    width: 16vw;
-  }
-  .sign-out {
-    position: absolute;
-    bottom: 3rem;
-    left: 0.5rem;
-  }
-}
-
- /* `sm` applies to x-small devices (portrait phones, less than 576px) */
- @media (max-width: 575.98px) { 
-  .col-left {
-    width: 25vw;
-  }
-  .sign-out {
-    position: absolute;
-    bottom: 3rem;
-    left: 1rem;
-  }
-  
-}
-=======
 .pagination .active a {
   background-color: var(--st-tertiary-500);
 }
@@ -579,4 +473,3 @@ i.fa-light.fa-image {
   }
 
 }
->>>>>>> a7fe48e7ce754ad17f3a5899c4ad886add3bfe70
