@@ -35,7 +35,7 @@
 .st-c-card-horizontal {
   display: flex;
   width: 743px;
-  /* height: 374px; */
+  height: 374px;
   border:1px solid var(--st-white-500);
   border-radius: var(--st-radius-2);
 }
@@ -63,26 +63,44 @@
 }
 
 .st-c-card-small--image {
-  height: 100%;
+  min-height: 25vh;
+  max-height: 25vh;
   width: 100%;
   border-radius: var(--st-radius-2);
   object-fit: cover;
 }
 
 .st-c-card-small--text {
-  display: flex;
-  flex-direction: column;
-  padding: 16px 22px;
+  overflow-y: hidden;
   margin-bottom: 0;
-  height: auto;
+  width: 100%;
+  height: 170px;
 }
 
  /* `sm` applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
-   .st-c-card-horizontal {
+   .st-c-card-horizontal,
+   .st-c-card {
     flex-direction: column;
     width: auto;
+    height: 100%;
    }
+
+   .st-c-card-horizontal--image,
+   .st-c-card img {
+    width: 100%;
+   }
+
+   .st-c-card-small--text {
+    height: 230px;
+  }
+ }
+
+ @media (min-width: 768px) { 
+  .st-c-card-small--text {
+    height: 150px;
+  }
+ }
 
    .st-c-card-horizontal--image {
     width: 100%;

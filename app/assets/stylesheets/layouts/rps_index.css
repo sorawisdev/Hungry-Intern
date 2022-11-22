@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+ div.st-c-card-horizontal {
+    width: 100% !important;
+ }
+}
+
+
+@media (max-width: 575.98px) {
+
+}

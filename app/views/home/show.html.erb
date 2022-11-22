@@ -1,1 +1,117 @@
-<h1>Show</h1>
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="<%= root_path %>">
+        <img src="/assets/logo-nav.svg" alt="logo-nav">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <% Category.all.each do |c| %>
+            <li class="header-nav-link text-decoration-none">
+              <%= link_to c.name, action: "category", id: c %>
+            </li>
+          <% end %>
+          <li class="header-nav-link">
+            <%= link_to 'All Recipes', list_path(@lists) %>
+          </li>
+        </ul>
+        <a href=" <%= recipes_path %> "><button class="st-c-btn-primary"> For Admin </button></a>
+
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  
+  <div class="container mt-5 px-5">
+  
+    <!-- breamdcrumb -->
+    <div aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="<%= root_path %>">Home</a></li>
+        <li class="breadcrumb-item"><a href=""><%= @recipe.category.name %></a></li>
+        <li class="breadcrumb-item bread_active st-s-text--primary500" aria-current="page"><%= @recipe.name %></li>
+      </ol>
+    </div>
+
+
+            <div class="container p-1 my-4">
+                <h1 class="st-font-weight-7 text-truncate text-uppercase"><%= @recipe.name %></h1>
+                <p class="mt-4">Date : <%= @recipe.created_at.strftime("%d %B %Y")%></p>
+                
+                <% if @recipe.recipe_image.attached? %>
+                  <img class="banner_image mb-5" src="<%= rails_blob_url(@recipe.recipe_image) %>" alt="recipes img">
+                <% end %>
+                
+
+                <div class="d-inline-block h-100"></div>
+                <div class="mt-3">
+                    <p> &emsp; &emsp; <%= @recipe.description %> </p>
+                </div>
+            </div>
+
+
+
+            <div class="my-5">
+                <i class="fa-sharp fa-solid fa-salad"></i>
+                <div class="row mt-3">
+                    <div class="w-50">   
+                        <div class="row w-100">
+                          <% @recipe.ingredients.each do |ingredient| %>
+                          <div class="col col-md-6 col-lg-6 border-bottom pb-2"><%= ingredient.name %></div>
+                          <% end %>
+                        </div>                    
+                    </div>           
+                </div>       
+            </div>
+
+
+
+            <div class="instructions-field">
+                <div class="d-flex">
+                    <i class="fa-solid fa-square-list"></i>
+                    <h4>Instructions</h4>
+                </div>
+
+                <div class="text-field">
+                    <div class="d-flex flex-row mt-4">
+                      <div>
+                        <span class="square"></span>
+                      </div>
+                        <p> <%= @recipe.instruction %> </p>
+                    </div>
+                </div>
+          </div>
+  </div>
+  
+</main>
+
+<footer class="mt-5">
+  <div class="footer py-3 st-s-color--primary500">
+    <div class="d-flex justify-content-center mt-4 mb-3">
+      <img src="/assets/logo-footer.svg" alt="logo-footer">
+    </div>
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3 mt-3">
+      <% @categs.each do |c| %>
+        <li class="footer-nav-link st-s-text--white50 text-decoration-none text-center px-3">
+          <%= link_to c.name, action: "category", id: c %>
+        </li>
+      <% end %>
+
+      <li class="footer-nav-link st-s-text--white50 text-decoration-none text-center px-3">
+        <%= link_to 'All Recipes', list_path(@lists) %>
+      </li>
+    </ul>
+    <div class="d-flex justify-content-center mb-5">
+      <small class="st-s-text--white50">
+        ©2022 Banana Coding Co., Ltd. all rights reserved
+      </small>
+
+    </div>
+  </div>
+</footer>

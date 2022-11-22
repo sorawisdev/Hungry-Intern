@@ -175,3 +175,15 @@
   color: var(--st-white-50);
   border: none;
 }
+
+.st-c-btn-red500,
+.st-c-btn-red500:active {
+  background-color: var(--st-red-500);
+  border-radius: var(--st-radius-2);
+  border: none;
+  cursor: pointer;
+  color: var(--st-white-50);
+  font-size: var(--st-type-base-size);
+  font-weight: var(--st-font-weight-6);
+  padding: var(--st-spacing-04) var(--st-spacing-05);
+}
