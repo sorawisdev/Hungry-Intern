@@ -11,15 +11,20 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <% Category.all.each do |c| %>
-            <li class="header-nav-link text-decoration-none">
-              <%= link_to c.name, action: "category", id: c %>
+            <li class="header-nav-link text-decoration-none mx-4 <%= active_class(category_path(c)) %>">
+              <%= link_to c.name, category_path(c) %>
             </li>
           <% end %>
-          <li class="header-nav-link">
+          <li class="header-nav-link mx-4">
             <%= link_to 'All Recipes', list_path(@lists), class:"header-nav-link_active" %>
           </li>
         </ul>
-        <%= link_to "For Admin" , new_user_session_path , class:"st-c-btn-primary text-decoration-none" %>
+        
+        <% if user_signed_in? %>
+          <%= link_to "For Admin", recipes_path , class:"st-c-btn-primary text-decoration-none " %>
+        <% else %>
+          <%= link_to "For Admin", new_user_session_path, class:"st-c-btn-primary text-decoration-none" %>
+        <% end %>
 
       </div>
     </div>
@@ -39,18 +44,18 @@
     <!-- 1st row -->
     <div class="row my-4">
       <% @lists.reverse.each do |recipe| %>
-      <div class="col d-flex justify-content-center mb-4">
+      <div class="col d-flex justify-content-start mb-4">
         <%= link_to action: "show", id: recipe do %>
         <div class="st-c-card-small bg-white">
           <% if recipe.recipe_image.attached? %>
             <img class="st-c-card-small--image" src="<%= rails_blob_url(recipe.recipe_image) %>" alt="recipes img">
           <% end %>
-          <a href="#" class="st-c-card-mall--text h-auto p-2">
+          <div class="st-c-card-mall--text h-auto p-2">
             <h5 class="st-c-card-text--header text-truncate"> <%= recipe.name %> </h5>
             <p class="st-s-text--tertiary500"> <%= recipe.category.name %> </p>
             <p class="st-c-card-small--text"> <%= recipe.description %> </p>
             <p class="st-c-card-text--date"> <%= recipe.created_at.strftime("%d %b, %Y") %> </p>
-          </a>
+          </div>
         </div>
         <% end %>
       </div>

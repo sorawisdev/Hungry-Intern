@@ -2,6 +2,8 @@ class Recipe < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true
   validates :ingredients, presence: true
+  validates :recipe_image, presence: true
+  
 
   belongs_to :category
 

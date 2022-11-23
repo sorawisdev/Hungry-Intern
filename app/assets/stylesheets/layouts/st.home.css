@@ -17,8 +17,8 @@ body {
   font-family: var(--st-font-family);
   color: var(--st-s-text--black800);
   text-decoration: none;
-  margin-left: 2.5rem;
-  line-height: 22px;
+  text-align: center;
+  line-height: 25px;
 }
 
 .header-nav-link_active {
