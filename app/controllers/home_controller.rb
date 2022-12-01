@@ -9,6 +9,7 @@ class HomeController < ApplicationController
   def index
     @recipes = Recipe.all
     @recipes_reverse = Recipe.all.reverse
+    @subscriber = Subscriber.new
   end
 
   def show 
@@ -17,7 +18,6 @@ class HomeController < ApplicationController
 
   def list
     @lists = Recipe.all
-
   end
 
   def category

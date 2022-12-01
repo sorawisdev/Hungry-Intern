@@ -11,4 +11,5 @@ class Recipe < ApplicationRecord
   has_many :ingredients, through: :recipes_ingredients
 
   has_one_attached :recipe_image
+
 end

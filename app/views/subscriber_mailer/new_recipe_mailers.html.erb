@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <title>Our New</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .col-img img {
+      text-align: center;
+      width: 128px;
+      margin: 2rem 0;
+    }
+
+    .content {
+      width: 80vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-top: 2rem;
+    }
+
+    .description {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: start;
+      margin: 1.5rem 0;
+    }
+
+    .banner_image {
+      width: 100%;
+      height: 50vh;
+      object-fit: cover;
+      overflow: hidden;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+    }
+    .see-all-link {
+      width: 30vw;
+      background-color: #EE415F;
+      padding: 15px;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+      margin: 3rem 0;
+    }
+
+    @media (max-width: 575.98px) {
+    .see-all-link {
+      width: 80vw;
+      font-size: 14px;
+    }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="col-img">
+      <%= image_tag(attachments["logo-nav.svg"].url, width: '100', height: '100') %>
+    </div>
+
+    <div class="content">
+      <h2>New Recipe</h2>
+      <p class="description"> <%= @recipe.description  %></p>
+  
+      <% if @recipe.recipe_image.attached? %>
+        <img class="banner_image mb-5" src="<%= rails_blob_url(@recipe.recipe_image) %>" alt="recipes img">
+      <% end %>
+
+      
+
+      <div class="my-5 text-start w-100">
+        <i class="fa-solid fa-bowl-food subtitle"></i>
+        <div class="row mt-3">
+          <div class="w-50">   
+            <div class="row w-100">
+              <% @recipe.ingredients.each do |ingredient| %>
+                <div class="col col-md-6 col-lg-6 border-bottom pb-2"><%= ingredient.name %></div>
+              <% end %>
+            </div>                    
+          </div>           
+        </div>       
+      </div>
+
+      <div class="instructions-field">
+        <div class="d-flex align-items-center">
+          <i class="fa-solid fa-rectangle-list subtitle"></i>  
+            <h4 class="mb-0 mx-3">Instructions</h4>
+        </div>
+        <div class="text-field">
+          <div class="d-flex flex-row mt-4">
+            <div>
+              <span class="square"></span>
+            </div>
+            <p> <%= @recipe.instruction %> </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <a href="<%= list_url %>" class="see-all-link"> See all recipes on our Website </a>
+  </div>
+</body>
+
+</html>

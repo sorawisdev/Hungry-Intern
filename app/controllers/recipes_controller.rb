@@ -19,8 +19,9 @@ class RecipesController < ApplicationController
   def create 
     @recipe = Recipe.new(recipe_params)
     if @recipe.save
+      send_mail_to_sub
       redirect_to recipes_path
-    else 
+    else
       render :new
     end
   end
@@ -33,7 +34,13 @@ class RecipesController < ApplicationController
     end
   end
 
+  def send_mail_to_sub
+    @subscribers = Subscriber.all
+    SubscriberMailer.with(subscribers: @subscribers, recipe: @recipe).new_recipe_mailers(@recipe).deliver_now
+  end
+
   def recipe_params
     params.require(:recipe).permit(:name, :description, :category_id, :recipe_image, :instruction, ingredient_ids: [])
   end
+
 end

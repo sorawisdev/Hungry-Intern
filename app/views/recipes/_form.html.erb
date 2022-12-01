@@ -3,7 +3,7 @@
   <div class="col-left">
     <div class="mt-4">
       <a class="navbar-brand" href="<%= recipes_path %>">
-      <img src="/assets/logo-footer.svg" alt="logo-nav" class="logo-side">
+        <%= image_tag 'logo-footer.svg', class:'logo-side' %>
       </a>
     </div>
 
@@ -14,7 +14,7 @@
 
     <div class="d-flex sign-out">
       <i class="fa-solid fa-right-from-bracket p-1"></i>
-      <a href="#">Sign out</a>
+      <%= button_to "Sign out", destroy_user_session_path,  method: :delete  %>
     </div>
           
   </div>
@@ -46,7 +46,7 @@
     
               <div class="up-img mt-3 w-75 content-rps">
                 <div href="/views/add_recipes_filled.html" class="text-center w-75">
-                  <i class="fa-light fa-image st-s-text--tertiary500 st-font-header-2 pt-3"></i>
+                  <i class="fa-regular fa-image st-s-text--tertiary500 st-font-header-2 pt-3"></i>
                   <br>
                   <label class="st-c-form-label st-font-weight-6"> Drag & Drop image here </label>
                   <p class="st-s-text--white900">or</p>
@@ -74,7 +74,7 @@
               <div class="row row-checkbox-rps my-3">
                 <%= form.label :ingredients, class:"st-font-weight-6 mt-3" %>
                 <%= form.collection_check_boxes :ingredient_ids, Ingredient.all ,:id, :name do |b| %>
-                <div class="col-12 col-sm-4">
+                <div class="col-12 col-md-4 col-lg-3">
                   <div class="form-check">
                     <%= b.check_box %>
                     <%= b.label %>

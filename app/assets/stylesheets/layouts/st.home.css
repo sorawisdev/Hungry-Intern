@@ -123,7 +123,12 @@ body {
 .sign-out {
   position: absolute;
   bottom: 3rem;
-  left: 3rem;
+  left: 2rem;
+}
+.sign-out button {
+  border: none;
+  background-color: inherit;
+  color: white
 }
 
 .col-left {
@@ -203,7 +208,7 @@ body {
   height: auto;
 }
 
-i.fa-light.fa-image {
+i.fa-regular.fa-image{
   font-size: 54px;
 }
 
@@ -234,6 +239,19 @@ i.fa-light.fa-image {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
+}
+
+.action-mailer {
+  max-width: 720px;
+  min-height: 100vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mailer-logo {
+  width: 128px;
 }
 
 
@@ -330,7 +348,7 @@ i.fa-light.fa-image {
   }
 
   p.mt-3.side-recipes,
-  i.fa-pot-food.fa-solid {
+  i.fa-solid .fa-bowl-food {
     font-size: 0.5rem;
   }
 
@@ -347,7 +365,7 @@ i.fa-light.fa-image {
     min-width: 100%;
   }
 
-  i.fa-light.fa-image {
+  i.fa-regular.fa-image {
     font-size: 20px;
   }
 
@@ -365,7 +383,7 @@ i.fa-light.fa-image {
     align-items: center;
   }
 
-  .sign-out a,
+  .sign-out button,
   .sign-out i {
     font-size: 0.5rem;
   }
@@ -470,6 +488,19 @@ i.fa-light.fa-image {
     margin-left: 0;
     line-height: 22px;
     text-align: center;
+  }
+
+  .action-mailer p {
+    font-size: 14px;
+  }
+
+  .mailer-logo {
+    width: auto;
+  }
+
+  .action-mailer a {
+    font-size: 14px;
+    width: 75% !important;
   }
 
 }
