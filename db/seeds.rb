@@ -11,6 +11,14 @@ catagory = Category.all
 # Category.create()
 ingredient = Ingredient.all
 
+user = User.all
+
+if user.size.zero?
+  user = User.create(email: 'g@g.com', password: 123456)
+  user.add_role :admin
+  
+end
+
 if catagory.size.zero?
     ['Breakfast', 
      'Lunch', 

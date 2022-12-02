@@ -33,6 +33,7 @@
 
 <main>
   <div class="container my-5">
+    <% if @recipes.length() >= 3 %>
     <div class="row d-flex justify-content-between">
       <div class="col-sm-12 col-lg-7"> 
           
@@ -88,6 +89,58 @@
       </div>
 
     </div>
+    <% else %> 
+    <!-- if db no data show default -->
+    <div class="row d-flex justify-content-between">
+      <div class="col-sm-12 col-lg-7"> 
+          
+          <!-- card1 -->
+          <div class="col">  
+            <a href="<%= new_recipe_path %>">
+            <div class="st-c-card-horizontal bg-white mb-5">
+              <%= image_tag "default.jpg", class:"st-c-card-horizontal--image", alt:"default img"%>
+              <div class="st-c-card-horizontal--text text-start">
+                <h5 class="st-c-card-text--header text-truncate">Default title </h5>
+                <p class="st-s-text--tertiary500">Default category</p>
+                <p> default description, Please sign-in and add at least 3 new recipes </p>
+                <p class="st-c-card-text--date"> 0 - 0 - 2022 </p>
+              </div>
+            </div>
+            </a>                 
+          </div>
+
+          <div class="col">
+            <!-- card2 -->
+            <a href="<%= new_recipe_path %>">
+            <div class="st-c-card-horizontal bg-white">
+              <%= image_tag "default.jpg", class:"st-c-card-horizontal--image", alt:"default img"%>
+              <div class="st-c-card-horizontal--text text-start">
+                <h5 class="st-c-card-text--header text-truncate"> Default title </h5>
+                <p class="st-s-text--tertiary500"> Default category </p>
+                <p> default description, Please sign-in and add at least 3 new recipes </p>
+                <p class="st-c-card-text--date"> 0 - 0 - 2022 </p>
+              </div>
+            </div>
+            </a>                   
+          </div>
+      </div>
+
+      <div class="col-sm-12 col-lg-4">
+        <a href="<%= new_recipe_path %>">
+        <div class="st-c-card bg-white h-100">
+        <%= image_tag "default.jpg", class:"st-c-card-image", alt:"default img"%>
+          <div class="st-c-card-text">
+            <h5 class="st-c-card-text--header text-truncate"> Default title </h5>
+            <p class="st-s-text--tertiary500"> Default category </p>
+            <p> default description, Please sign-in and add at least 3 new recipes </p>
+            <p class="st-c-card-text--date"> 0 - 0 - 2022 </p>
+          </div>
+        </div>
+        </a>
+      </div>
+
+    </div>
+    <% end %>
   </div>
 
   <!-- Subscribe field -->
@@ -106,12 +159,12 @@
       <div class="col-5 col-lg-3 subsrcibe-form">
         <form>
           <div class="mt-3">
-            <%= form.text_field :name, class:'form-control st-c-form-input', placeholder: 'Name'%>
+            <%= form.text_field :name, required: true, class:'form-control st-c-form-input', placeholder: 'Name'%>
           </div>
           <div class="mt-3">
-            <%= form.text_field :email, class: 'form-control st-c-form-input', placeholder: 'Email Address'%>
+            <%= form.email_field :email, required: true, class: 'form-control st-c-form-input', placeholder: 'Email Address'%>
           </div>
-          <%= form.submit "Subscribe", class:'st-c-btn-black mt-4 w-100'%>
+          <%= form.submit "Subscribe", class:'st-c-btn-black mt-4 w-100' %>
         </form>
       </div>
     </div>
